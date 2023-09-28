@@ -3,16 +3,16 @@
 Repository folders description
 
 #Full_Code_Folder
-#Contains all the code used for this assignment.
+Contains all the code used for this assignment.
 
 #Main_Code
-#Contains the main classes.
+Contains the main classes.
 
 #Price_Files
-#Contains the files which provide the prices for apples, bananas, eggs and milk.
+Contains the files which provide the prices for apples, bananas, eggs and milk.
 
 #Test_Code
-#Contains the GroceryStore.java file which is the test class for this assignment.
+Contains the GroceryStore.java file which is the test class for this assignment.
 
 Test Methods
 
