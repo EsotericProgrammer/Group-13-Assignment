@@ -38,3 +38,7 @@ It prints the name and price of the created product.
 
 
 When you run the GroceryStore program, it will simulate a grocery store by creating instances of various grocery products (apples, bananas, milk, and eggs) using their respective factories and then printing out the names and prices of these products. The prices are read from external text files as specified in each factory class.
+
+UML Diagram
+![Diagram](https://github.com/EsotericProgrammer/Group-13-Assignment/assets/140844647/666ebaf7-c73b-4afc-9f7c-92b24e029275)
+
