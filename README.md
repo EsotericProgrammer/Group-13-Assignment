@@ -23,36 +23,18 @@ This class creates apple, banana, milk and egg factories and creates objects of 
 ![image](https://github.com/EsotericProgrammer/Group-13-Assignment/assets/140844647/4531866f-f7c6-47b9-ad51-b677d2ccaab5)
 
 
-Interfaces and Base Classes:
+GroceryProduct Interface: This is an interface that defines two methods: getName() and getPrice(). Any class that implements this interface must provide implementations for these methods.
 
-GroceryProduct is an interface that defines three methods: getName(), getPrice(), and setPrice(double price). It's used as a common interface for grocery products.
-Apple and Banana are base classes that implement the GroceryProduct interface. They have private fields for name and price, as well as setters and getters for these fields.
+GroceryProductFactory Interface: Another interface that defines a single method createProduct(). Classes that implement this interface will be responsible for creating instances of grocery products.
 
-Subclasses:
+Apple, Banana, Eggs, and Milk Classes: These are concrete classes that implement the GroceryProduct interface. Each class represents a specific grocery product and provides its name and price.
 
-RedApple, GreenApple, RawBanana, and RipenedBanana are subclasses of Apple and Banana. They inherit the properties and methods of their parent classes.
+AppleFactory, BananaFactory, EggFactory, and MilkFactory Classes: These are factory classes that implement the GroceryProductFactory interface. Each factory is responsible for creating instances of a specific grocery product. They read the product's price from a text file (apple_prices.txt, banana_prices.txt, egg_prices.txt, and milk_prices.txt) and then create a product instance with the appropriate name and price.
 
-Factories:
-
-AppleFactory and BananaFactory are responsible for creating instances of apple and banana products, respectively.
-Each factory takes a file path as an argument to specify the location of the database (text file) containing product names and prices.
-
-Factory Methods:
-
-In each factory, the createProduct(String name) method creates an instance of the specified product based on the provided name.
-The method reads the product's price from the database (text file) using the getPriceFromDatabase(name) method.
-If the product name is not found in the database, an IllegalArgumentException is thrown.
+GroceryStore Class: This is the main class of the program. In its main method, it does the following for each product:
+It creates an instance of the corresponding factory (e.g., BananaFactory for bananas).
+It calls the createProduct method on the factory to create a product.
+It prints the name and price of the created product.
 
 
-Reading Prices from Database:
-
-The getPriceFromDatabase(String productName) method reads the database (text file) line by line and extracts the price of the specified product.
-If the product is found in the database, its price is returned; otherwise, an exception is thrown.
-
-
-GroceryStore Class:
-
-The FactoryTester class is the main class where the program starts.
-It creates instances of AppleFactory and BananaFactory, specifying the path to the database (text file).
-It demonstrates the creation of specific products (e.g., "Red Apple" and "Ripened Banana") using the factory methods.
-If the product name is not found or is invalid, an IllegalArgumentException is caught and a corresponding error message is displayed.
+When you run the GroceryStore program, it will simulate a grocery store by creating instances of various grocery products (apples, bananas, milk, and eggs) using their respective factories and then printing out the names and prices of these products. The prices are read from external text files as specified in each factory class.
